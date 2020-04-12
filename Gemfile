@@ -48,10 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'slim-rails', '~> 3.2'
 
-gem 'bootstrap', '~> 4.2', '>= 4.2.1'
-
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-
 gem 'i18n-js'
 
 gem 'devise', '~> 4.6', '>= 4.6.2' 

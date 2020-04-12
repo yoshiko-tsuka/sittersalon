@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sittersalon</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= yield :meta_include %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= yield :css_include %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :js_include %>
+
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css", :media => "all" %>
+    <script src="https://kit.fontawesome.com/0615858929.js"></script>
+    <!-- Google Tag Manager -->
+    <!-- <script>
+       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','<%= Settings.google_analytic_id %>');
+    </script> -->
+    <!-- End Google Tag Manager -->
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= controller_name %> , <%= action_name %>" >
+    <%= debug(params) if Rails.env.development? %>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<%= Settings.google_analytic_id %>" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
+    <!-- End Google Tag Manager (noscript) -->
+
+    <% if content_for?(:flash_message) %>
+      <%= yield(:flash_message) %>
+    <% else %>
+      <%= render 'shared/messages' %>
+    <% end %>
+
+    <!-- header -->
+    <%= render 'layouts/header_simple' %>
+    <!-- End header -->
+
+    <section class="wrapper">
+      <div class="content-area">
+        <div class="content-wrapper" >
+          <%= yield %>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <%= render 'layouts/footer_simple' %>
+    <!-- End footer -->
+
   </body>
+
+
 </html>

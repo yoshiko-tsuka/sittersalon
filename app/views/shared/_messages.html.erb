@@ -1,0 +1,9 @@
+<% flash.each do |key, value| %>
+<%# != 'timedout' is avoided  a flash message  %>
+    <% type = (key == 'notice') ? 'success' : 'error' %>
+    <script>
+        $(function() {
+        toastr["<%= type %>"]("<%= value %>", '', {"positionClass": "toast-top-right", "timeOut": "5000"})
+        });
+    </script>
+<% end %>
