@@ -1,0 +1,58 @@
+[v-cloak] {
+    display:none;
+}
+
+header {
+    background-color: #FFFFFF;
+    font-family: monospace;
+}
+
+.menubtn {
+  display: block;
+  width: 40px;
+  height:35px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 100;
+  float: left;
+}
+
+#menu-pc {
+    width: 100%;
+}
+.nav__lst {
+    text-align: left;
+    font-size: 17px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 10px;
+    color: #A35F50;
+    transition: color 0.4s ease 0s;
+}
+
+.nav__lst li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.nav__lst li a:visited {
+    color: #A35F50;
+}
+
+.nav__lst li a:hover, a:active {
+    color: #E89989;
+    text-decoration: none;
+}
+
+.trans_slide-enter-active{
+    transition: all 1.0s;
+}
+
+.trans_slide-leave-active {
+    transition: all .0s;
+}
+
+.trans_slide-enter, .trans_slide-leave-to {
+    height: 0;
+}

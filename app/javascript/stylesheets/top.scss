@@ -1,0 +1,27 @@
+.top1 {
+    position: relative;
+    background-color: white;
+}
+
+.c-name {
+    position: absolute;
+    font-style : italic;
+    color: #A35F50;
+    top: 20%;
+    left: 20%;
+}
+
+.c-name h1 {
+    font-size: 50px;
+}
+
+.c-name p {
+    font-size: 20px;
+}
+
+.top1 img{
+    width: 100%;
+    max-height: 600px;
+    opacity: 0.5;
+    filter: opacity(80%);
+}

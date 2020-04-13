@@ -8,6 +8,7 @@
 
     <%= yield :css_include %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'vendor/toastr/toastr' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= yield :js_include %>
 
