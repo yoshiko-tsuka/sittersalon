@@ -3,25 +3,57 @@
     background-color: white;
 }
 
+.top2 {
+    background-color: #E89989;
+}
+
 .c-name {
     position: absolute;
-    font-style : italic;
-    color: #A35F50;
+    color: #E89989;
     top: 20%;
     left: 20%;
 }
 
+.c-name div {
+    text-align: left;
+    margin-bottom: 30%;
+}
+
 .c-name h1 {
-    font-size: 50px;
+    font-family: "PlayfairDisplayItalic";
+    font-size: 60px;
 }
 
 .c-name p {
-    font-size: 20px;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.c-name h5 {
+    font-family: "PlayfairDisplayItalic";
+    font-size: 23px;
+    text-decoration: underline;
+    color: #A35F50;
 }
 
 .top1 img{
     width: 100%;
+    max-width: 1400px;
     max-height: 600px;
     opacity: 0.5;
-    filter: opacity(80%);
+    filter: opacity(40%) contrast(130%);
+}
+
+.services {
+    margin: 30px 10px 20px 10px;
+}
+
+.services img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.services button {
+    margin: 0 auto;
 }

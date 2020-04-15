@@ -2,6 +2,11 @@
 @import 'top';
 @import 'menu';
 
+@font-face{
+    font-family: "PlayfairDisplayItalic";
+    src: url('fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
 body {
     font-size: 10px;
     font-family: serif;
@@ -9,4 +14,12 @@ body {
 
 .active {
     color: #E89989!important;
+}
+
+section {
+    text-align:center;
+}
+
+.div {
+    max-width: 1400px;
 }
